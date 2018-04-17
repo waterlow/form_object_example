@@ -64,6 +64,7 @@ gem 'sprockets', '4.0.0.beta7'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'octicons_helper'
+gem 'draper'
 group :development do
   gem 'hamlit-rails'
 end

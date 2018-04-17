@@ -64,86 +64,14 @@
           %th 商品名
           %th 販売価格
           %th 仕入原価
-      %tbody
-        %tr
-          %td
-            %span.badge.badge-success 販売中
-          %td RA0000001
-          %td A製造アルミケースRSDI001
-          %td 2,500円
-          %td 1,200円
-      %tbody
-        %tr
-          %td
-            %span.badge.badge-success 販売中
-          %td RA0000001
-          %td A製造アルミケースRSDI001
-          %td 2,500円
-          %td 1,200円
-      %tbody
-        %tr
-          %td
-            %span.badge.badge-success 販売中
-          %td RA0000002
-          %td A製造アルミケースRSDI002
-          %td 3,200円
-          %td 2,000円
-      %tbody
-        %tr
-          %td
-            %span.badge.badge-success 販売中
-          %td RA0000002
-          %td A製造アルミケースRSDI002
-          %td 3,200円
-          %td 2,000円
-      %tbody
-        %tr
-          %td
-            %span.badge.badge-success 販売中
-          %td RB0000001
-          %td B製造アルミケースBSD001
-          %td 900円
-          %td 800円
-      %tbody
-        %tr
-          %td
-            %span.badge.badge-success 販売中
-          %td RB0000001
-          %td B製造アルミケースBSD001
-          %td 900円
-          %td 800円
-      %tbody
-        %tr
-          %td
-            %span.badge.badge-secondary 販売不可
-          %td RX0000099
-          %td A電子カードホルダ
-          %td 3,000円
-          %td 2,500円
-      %tbody
-        %tr
-          %td
-            %span.badge.badge-secondary 販売不可
-          %td RX0000099
-          %td A電子カードホルダ
-          %td 3,000円
-          %td 2,500円
-      %tbody
-        %tr
-          %td
-            %span.badge.badge-secondary 販売不可
-          %td RX0000179
-          %td A電子光沢アルミケース TypeA
-          %td 9,800円
-          %td 8,000円
-      %tbody
-        %tr
-          %td
-            %span.badge.badge-secondary 販売不可
-          %td RX0000179
-          %td A電子光沢アルミケース TypeA
-          %td 9,800円
-          %td 8,000円
+      - Product.all.decorate.each do |product|
+        %tbody
+          %tr
+            %td= product.sales_condition
+            %td= product.code
+            %td= product.name
+            %td= product.display_price
+            %td= product.display_purchase_cost
 %hr/
 %footer
   %p © waterlow.io 2018
