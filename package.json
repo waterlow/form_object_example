@@ -1,5 +1,7 @@
 {
   "name": "form_object_example",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jpn.css": "^1.0.1"
+  }
 }

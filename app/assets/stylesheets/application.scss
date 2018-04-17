@@ -5,6 +5,7 @@ $badge-padding-y: .25rem;
 $badge-padding-x: .45rem;
 
 $table-cell-padding: .5rem;
-
+@import "jpn.css/src/bootstrap/jpn.scss";
 @import "bootstrap";
+
 @import "common";
