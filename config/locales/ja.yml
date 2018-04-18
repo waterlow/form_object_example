@@ -42,3 +42,14 @@ ja:
         significant: false
         strip_insignificant_zeros: false
         unit: 円
+  helpers:
+    label:
+      search_product:
+        code: 商品コード
+        name: 商品名
+        name_kana: 商品名カナ
+        price_from: 最低商品価格
+        price_to: 最高商品価格
+        purchase_cost_from: 最低仕入原価
+        purchase_cost_to: 最高仕入原価
+        available: 販売中のみ

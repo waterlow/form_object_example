@@ -1,0 +1,24 @@
+= bootstrap_form_with(model: @product, url: root_path, local: true, method: :get) do |f|
+  .card.search-panel
+    .card-header
+      %h2.card-title= icon_text('search', '検索条件')
+    .card-body
+      .row
+        .col-sm-6
+          = f.text_field(:code, two_column_option)
+          = f.text_field(:name, two_column_option)
+          = f.text_field(:name_kana, two_column_option)
+          .form-group.row
+            .col-sm-4
+            %label.col-sm-8
+              = f.check_box_without_bootstrap :available
+              販売中のみ
+        .col-sm-6
+          = f.text_field(:price_from, two_column_option)
+          = f.text_field(:price_to, two_column_option)
+          = f.text_field(:purchase_cost_from, two_column_option)
+          = f.text_field(:purchase_cost_to, two_column_option)
+        .col-sm-12.text-center
+          = link_to('クリア', root_path, class: 'btn btn-secondary btn-left')
+          = button_tag(class: 'btn btn-primary') do
+            = icon_text('search', '検索条件')
