@@ -44,7 +44,7 @@ ja:
         unit: 円
   helpers:
     label:
-      search_product:
+      search_product: &search_product
         code: 商品コード
         name: 商品名
         name_kana: 商品名カナ
@@ -53,3 +53,7 @@ ja:
         purchase_cost_from: 最低仕入原価
         purchase_cost_to: 最高仕入原価
         available: 販売中のみ
+  activemodel:
+    attributes:
+      search/product:
+        <<: *search_product

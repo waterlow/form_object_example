@@ -69,3 +69,5 @@ group :development do
   gem 'hamlit-rails'
 end
 gem 'bootstrap_form', github: 'bootstrap-ruby/bootstrap_form'
+gem 'pry-rails'
+gem 'pry-byebug'

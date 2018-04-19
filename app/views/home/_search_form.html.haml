@@ -1,4 +1,4 @@
-= bootstrap_form_with(model: @product, url: root_path, local: true, method: :get) do |f|
+= bootstrap_form_with(model: search_form, url: root_path, local: true, method: :get) do |f|
   .card.search-panel
     .card-header
       %h2.card-title= icon_text('search', '検索条件')
@@ -10,9 +10,7 @@
           = f.text_field(:name_kana, two_column_option)
           .form-group.row
             .col-sm-4
-            %label.col-sm-8
-              = f.check_box_without_bootstrap :available
-              販売中のみ
+            .col-sm-8= f.check_box :available, class: 'shared-form'
         .col-sm-6
           = f.text_field(:price_from, two_column_option)
           = f.text_field(:price_to, two_column_option)

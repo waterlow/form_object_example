@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @product = Search::Product.new(search_params)
-    @products = @product
+    @search_form = Search::Product.new(search_params)
+    @products = @search_form
       .matches
       .order(available: :desc, code: :asc)
       .decorate
